@@ -10,6 +10,8 @@ const port = 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('./src/assests'));
+
 
 app.set("view engine", "ejs");
 app.set('views', './src/Views');

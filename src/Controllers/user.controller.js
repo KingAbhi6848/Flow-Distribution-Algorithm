@@ -69,6 +69,17 @@ export default class UserController {
     }
   }
 
+  viewRegister(req,res){
+    return res.render('userRegisterForm',{
+      title: "Register Form"
+    })
+  }
+  viewLogin(req,res){
+    return res.render('userLoginUser',{
+      title: "Login Form"
+    })
+  }
+
   logout(req, res) {
     try {
       // Destroy the session

@@ -7,8 +7,13 @@ const userController = new UserController();
 
 userRoute.post('/register', userController.register);
 userRoute.post('/login',userController.login);
-userRoute.get('/home',auth,userController.home)
+
 userRoute.post('/logout',userController.logout);
+
+
+userRoute.get('/register',userController.viewRegister);
+userRoute.get('/login',userController.viewLogin);
+userRoute.get('/home',auth,userController.home);
 
 
 export default userRoute;
