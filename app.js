@@ -4,6 +4,7 @@ import userRoute from "./src/Routes/user.route.js";
 import astroRoute from "./src/Routes/astrologer.route.js";
 import session from "express-session";
 
+
 const app = express();
 const port = 5000;
 
@@ -11,6 +12,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
+app.set('views', './src/Views');
+app.set("layout extractScripts", true)
+app.set("layout extractStyles", true)
+
 
 app.use(session({
 

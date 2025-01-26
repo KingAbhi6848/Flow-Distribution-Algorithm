@@ -93,12 +93,20 @@ export default class UserController {
     }
   }
 
-  home(req,res){
-    return res.status(200).send({
-      success:true,
-      message:"This is homepage",
+  home(req, res) {
+    try {
+      return res.render("home", {
+        title: "Home", // Capitalize the title for better readability
+      });
+    } catch (error) {
 
-    })
+      console.log(error)
+      return res.status(500).json({
+        success: false,
+        message: error.message || "Internal server error",
+      });
+    }
   }
+  
   
 }

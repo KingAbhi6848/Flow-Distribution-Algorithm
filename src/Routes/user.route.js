@@ -7,7 +7,7 @@ const userController = new UserController();
 
 userRoute.post('/register', userController.register);
 userRoute.post('/login',userController.login);
-userRoute.post('/home',auth,userController.home)
+userRoute.get('/home',auth,userController.home)
 userRoute.post('/logout',userController.logout);
 
 
